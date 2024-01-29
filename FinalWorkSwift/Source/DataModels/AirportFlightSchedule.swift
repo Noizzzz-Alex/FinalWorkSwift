@@ -7,25 +7,6 @@
 
 import Foundation
 
-//struct ArrivalData: Decodable {
-//    let schedule: Schedule
-//}
-//
-//struct DepartureData: Decodable{
-//    let schedule: Schedule
-//}
-//
-//struct Schedule: Decodable {
-//    let arrival: String
-//    let departure: String
-//    let thread: [Thread]
-//}
-//
-//struct Thread: Decodable {
-//    let number: String
-//    let title: String
-//    let vehicle: String
-//}
 struct ScheduleResponse: Decodable {
     let schedule: [ScheduleItem]
 }
@@ -34,17 +15,6 @@ struct Station: Decodable {
     let title: String
 }
 
-//struct ScheduleItem: Decodable {
-//    let thread: Thread
-//    let arrival: String?
-//    let departure: String?
-//}
-
-//struct Thread: Decodable {
-//    let number: String
-//    let title: String
-//    let vehicle: String
-//}
 
 struct ScheduleItem: Decodable {
   let thread: Thread?
