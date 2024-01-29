@@ -1,0 +1,71 @@
+//
+//  PlaneData.swift
+//  FinalWorkSwift
+//
+//  Created by Александр Харлампов on 26.01.2024.
+//
+
+import Foundation
+
+//struct ArrivalData: Decodable {
+//    let schedule: Schedule
+//}
+//
+//struct DepartureData: Decodable{
+//    let schedule: Schedule
+//}
+//
+//struct Schedule: Decodable {
+//    let arrival: String
+//    let departure: String
+//    let thread: [Thread]
+//}
+//
+//struct Thread: Decodable {
+//    let number: String
+//    let title: String
+//    let vehicle: String
+//}
+struct ScheduleResponse: Decodable {
+    let schedule: [ScheduleItem]
+}
+
+struct Station: Decodable {
+    let title: String
+}
+
+//struct ScheduleItem: Decodable {
+//    let thread: Thread
+//    let arrival: String?
+//    let departure: String?
+//}
+
+//struct Thread: Decodable {
+//    let number: String
+//    let title: String
+//    let vehicle: String
+//}
+
+struct ScheduleItem: Decodable {
+  let thread: Thread?
+  let arrival: String?
+  let departure: String?
+
+  private enum CodingKeys: String, CodingKey {
+    case thread
+    case arrival
+    case departure
+  }
+}
+
+struct Thread: Decodable {
+  let number: String?
+  let title: String?
+  let vehicle: String?
+
+  private enum CodingKeys: String, CodingKey {
+    case number
+    case title
+    case vehicle
+  }
+}
