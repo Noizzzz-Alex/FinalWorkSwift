@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ArrivalScreen: UITableViewController, GettingArrivalSchedule {
+final class ArrivalScreen: UITableViewController, GettingArrivalSchedule {
     
     var flights = [ScheduleItem]()
 

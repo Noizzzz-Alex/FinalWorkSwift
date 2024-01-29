@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DepartureScreen: UITableViewController, GettingDepartureSchedule {
+final class DepartureScreen: UITableViewController, GettingDepartureSchedule {
     var flights = [ScheduleItem]()
     
 
